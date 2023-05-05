@@ -1,7 +1,10 @@
 # SAM-finetune
 Finetune Meta's SegmentAnything 
 
-(Currently supports ViT-H SAM (default) only)
+This repository contains a wrapper for fine-tuning Meta's SegmentAnything model on a custom dataset
+ for a single class. SegmentAnything is a novel deep learning model that performs semantic segmentation on an image for any number of classes. This repo leverages the prompt encoding feature of SegmentAnything to finetune to one class, using bounding boxes around the ground truth masks as the prompting.
+
+Currently supports ViT-H SAM (default) only, tested in KITTI road segmentation data
 
 
 ## Setup

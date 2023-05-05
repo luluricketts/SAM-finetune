@@ -12,7 +12,7 @@ def compute_avg_bbox(args):
     all_bbox = np.empty((0, 4))
     im_sizes = np.empty((0, 2))
     for i,mask_file in enumerate(os.listdir(mask_dir)):
-        # if '.png' not in mask_file: continue
+        if '.DS_Store' in mask_file: continue
 
         gt_mask = imageio.imread(os.path.join(mask_dir, mask_file))
         gt_mask = torch.tensor(gt_mask)[...,2] / 255.
